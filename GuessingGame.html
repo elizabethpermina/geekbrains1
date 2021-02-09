@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Угадайка </title>
+
+<script type="text/javascript">
+
+alert("Hello, user!");
+  var answer = parseInt(Math.random() * 100);
+
+  var userAnswer = +prompt("Угадайка! от 0 до 100");
+  maxAttempts = 7;
+
+  for(var tryCount = 1; tryCount <= maxAttempts; tryCount++) {
+    if(userAnswer == answer){
+      alert("Congrats!");
+      break;
+      //continue to the next iteration
+    } else if(userAnswer<answer){
+      alert("Too small!");
+    } else if(userAnswer>answer){
+      alert("Too big!");
+    }
+
+
+    userAnswer = +prompt("Try again - input a number from 0 to 100\n
+    You have " + (maxAttempts-tryCount) + " attempts left");
+
+  }
+
+</script>
+  </head>
+  <body>
+
+  </body>
+</html>
